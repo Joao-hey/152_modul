@@ -10,17 +10,32 @@
 </head>
 
 <body>
-    <div>
+    <div class="box">
+        <div class="box-header">
 
-        <h1>hheöö</h1>
-        <div>
+            <img class="logo" src="img/logo.png" alt="">
 
+            <div class="button">
+                <a href="">anmelden</a>
+                <a href="">registieren</a>
+            </div>
         </div>
-        
-        <div>
 
+        <div class="box-underliner">
+            <img src="img/line.png" alt="">
         </div>
-    
+
+        <div class="box-body">
+            <div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+        </div>
+
     </div>
 </body>
 
