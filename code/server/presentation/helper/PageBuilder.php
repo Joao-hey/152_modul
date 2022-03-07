@@ -11,15 +11,15 @@ class PageBuilder
             <meta charset=\"UTF-8\">
             <meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\">
             <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">
-            <title>Document</title>
-            <link rel=\"stylesheet\" href=\"controller/Start_website.css\">
+            <title>". $title ."</title>
+            <link rel=\"stylesheet\" href=\"/152_modul/code/client/Style/Start_website.css\">
         </head>
         
         <body>
             <div class=\"box\">
                 <div class=\"box-header\">
         
-                    <img class=\"logo\" src=\"img/logo.png\" alt=\"\">
+                    <img class=\"logo\" src=\"client/img/logo.png\" alt=\"\">
         
                     <div class=\"button\">
                         <a href=\"\">anmelden</a>
@@ -30,21 +30,21 @@ class PageBuilder
                 <div class=\"box-underliner\">
         
                     <picture>
-                        <source srcset=\"img/line-small.png\" media=\"(max-width: 700px)\">
-                        <img src=\"img/line-big.png\" alt=\"\">
+                        <source srcset=\"client/img/line-small.png\" media=\"(max-width: 700px)\">
+                        <img src=\"client/img/line-big.png\" alt=\"\">
                     </picture>
                 </div>
         
                 <div class=\"box-body\">
-                <div>";
+                    ";
 
-        include($_SERVER["DOCUMENT_ROOT"] . "/Projekt_ouk307-main/htdocs/app/server/presentation/view/" . $pageKey .".php");
+        include($_SERVER["DOCUMENT_ROOT"] . "/152_modul/code/server/presentation/view/" . $pageKey .".php");
 
 
         echo "
 
-        </div>
-        </div>
+                    
+                </div>
 
     </div>
 </body>
