@@ -5,8 +5,8 @@
     --green: #104E1D;
 }
 
-*{/*
-    border: 2px solid var(--green);*/
+*{
+    border: 2px solid var(--green);
     color: var(--white);
     background: var(--black);
     font-family: Arial, Helvetica, sans-serif;
@@ -51,12 +51,14 @@
 }
 
 
-.box-underliner img{
-    width: 100%;
+.box-underliner picture img{
+    width: 98%;
     height: auto;
+    margin-left: 1%;
+    margin-right: 1%;
 }
 
-.box-underliner img{
+.box-underliner picture{
     width: 100%;
 }
 
@@ -73,7 +75,6 @@
     padding: 5%;
     flex-wrap: wrap;
     justify-content: space-around;
-    padding-top: 200px;
 }
 
 .box-body div div{
@@ -118,8 +119,8 @@
         margin-right: 0.3em;
         font-size: 1em;
         padding: 1em 0.2em 1em 0.2em;
-        border: 2px solid var(--white);
-        border-radius: 20px;
+        border: 1px solid var(--white);
+        border-radius: 10px;
     }
     
 }

@@ -22,7 +22,11 @@
         </div>
 
         <div class="box-underliner">
-            <img src="img/line.png" alt="">
+
+            <picture>
+                <source srcset="img/line-small.png" media="(max-width: 700px)">
+                <img src="img/line-big.png" alt="">
+            </picture>
         </div>
 
         <div class="box-body">
