@@ -1,6 +1,6 @@
 <?php
 //verbindet mit dem server
-require_once "app/server/presentation/helper/DatabaseConnection.php";
+require_once "coder/server/presentation/helper/DatabaseConnection.php";
 class Profilmanager
 {
     private static $user;
@@ -14,7 +14,7 @@ class Profilmanager
         if (!isset($_SESSION["expiration_time"])){
             return false;
         }
-        self::$database = new DatabaseConnection("localhost", "root", "", "data");
+        self::$database = new DatabaseConnection("localhost", "root", "", "sot");
 
         self::$user = self::$database->getFirstResult(self::$database->query("SELECT * FROM user WHERE session = ? LIMIT 1", array(session_id()), array("s")));
 
