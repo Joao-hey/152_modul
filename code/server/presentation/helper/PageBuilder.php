@@ -18,20 +18,21 @@ class PageBuilder
         <body>
             <div class=\"box\">
                 <div class=\"box-header\">
-        
-                    <img class=\"logo\" src=\"client/img/logo.png\" alt=\"\">
-        
+                    <a href=\"/152_modul/code/server/index.php\">
+                        <img class=\"logo\" src=\"/152_modul/code/client/img/logo.png\" alt=\"\">
+                    </a>
+
                     <div class=\"button\">
-                        <a href=\"\">anmelden</a>
-                        <a href=\"\">registieren</a>
+                        <a href=\"/152_modul/code/server/login.php\">anmelden</a>
+                        <a href=\"/152_modul/code/server/signup.php\">registieren</a>
                     </div>
                 </div>
         
                 <div class=\"box-underliner\">
         
                     <picture>
-                        <source srcset=\"client/img/line-small.png\" media=\"(max-width: 700px)\">
-                        <img src=\"client/img/line-big.png\" alt=\"\">
+                        <source srcset=\"/152_modul/code/client/img/line-small.png\" media=\"(max-width: 700px)\">
+                        <img src=\"/152_modul/code/client/img/line-big.png\" alt=\"\">
                     </picture>
                 </div>
         

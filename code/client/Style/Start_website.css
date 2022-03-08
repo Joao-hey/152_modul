@@ -31,7 +31,7 @@
     
 }
 
-.box-header .logo{
+.box-header a .logo{
     width: 480px;
     padding-left: 2em;
 }
@@ -87,13 +87,12 @@
 
 @media (max-width: 1200px)
 {
-    .box-header{
-        width: 100%;
-        border-bottom: var(--white);
+    .box-header a{
+        width: 40%;
     }
 
-    .box-header .logo{
-        width: 40%;
+    .box-header a .logo{
+        width: 100%;
     }
 }
 @media (max-width: 730px)
