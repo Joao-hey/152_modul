@@ -1,7 +1,9 @@
 <?php
+
 class PageBuilder
 {
-    //erstell funktionion fèr die website
+    
+    //ENGLISH PLS erstell funktionion für die website
     public static function pagebuild($title = "", $pageKey = "")
     {
         echo "<!DOCTYPE html>
@@ -23,9 +25,9 @@ class PageBuilder
                     </a>
 
                     <div class=\"button\">
-                    ".
-                    include("code/server/presentation/controller/pagebuilder.php") . "
-                        
+                    ";
+                    include("code/server/presentation/controller/task.php"); 
+                    echo "
                     </div>
                 </div>
         

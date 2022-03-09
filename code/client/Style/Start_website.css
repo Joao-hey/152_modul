@@ -8,7 +8,6 @@
 
 *{/*
     border: 2px solid var(--green);*/
-    
     color: var(--white);
 }
 
@@ -16,9 +15,15 @@ html{
     text-decoration: none;
     background: var(--black);
     font-family: Arial, Helvetica, sans-serif;
-    padding: 0;
-    margin: 0;
+    
 }
+
+.button{
+    background-color: transparent;
+    margin-top: 2px;
+    padding: 0.5em;
+}
+
 
 .box{
     display: flex; 
@@ -45,17 +50,32 @@ html{
     flex-direction: row-reverse;
     align-self: center;
     font-size: 1.5em;
+    width: max-content;
     height: auto;
+    align-items: center;
 }
 .box-header .button a {
-    margin-right: 1em;
+    margin-right: 0.5em;
+    margin-top: 20vh;
     padding: 1.2em;
     width: 10%;
     border: 2px solid var(--white);
     border-radius: 10% / 50%;
     text-decoration: none;
 }
-
+.logoff{
+    margin-top: 20vh;
+   align-items: center;
+}
+.user-icon{
+    flex-wrap: nowrap;
+    flex-direction: row;
+    align-self: center;
+    float: right;
+    margin-right: 3em;
+    font-size: 1.5em;
+    height: 10vw;
+}
 
 .box-underliner picture img{
     width: 98%;
@@ -70,7 +90,6 @@ html{
 
 
 
-
 @media (max-width: 1200px)
 {
     .box-header a{
@@ -80,6 +99,7 @@ html{
     .box-header a .logo{
         width: 100%;
     }
+    
 }
 @media (max-width: 730px)
 {

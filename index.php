@@ -1,2 +1,6 @@
-<?php require_once "code/server/presentation/helper/PageBuilder.php";
+<?php 
+ini_set('display_errors', '1');
+ini_set('display_startup_errors', '1');
+error_reporting(E_ALL);
+require_once "code/server/presentation/helper/PageBuilder.php";
       PageBuilder::pagebuild("Startseite", "home");

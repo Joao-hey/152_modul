@@ -34,17 +34,17 @@
 <?php
 	require_once "code/server/database.php";
 
-	$empfehlungen = $database->toArray($database->query("SELECT * FROM empfehlung"));
+	$posts = DatabaseManager::$database->toArray(DatabaseManager::$database->query("SELECT * FROM posts"));
 
-	foreach ($empfehlungen as $empfehlung) {
+	foreach ($posts as $post) {
 		echo " 
-		<a href=\"Empfehlung.php? id=" . $empfehlung["empf_id"] . "\">
+		<a href=\"Empfehlung.php? id=" . $post["empf_id"] . "\">
 			<div class=\"emp\">
-				<img src=\"" . "152_modul/code/client/view/images/new/". $empfehlung["img_path"] . "\" alt=\"place\">
-				<h1>" . $empfehlung["titel"] . "</h1>
+				<img src=\"" . "152_modul/code/client/view/images/new/". $post["img_path"] . "\" alt=\"place\">
+				<h1>" . $post["titel"] . "</h1>
 				
 				<div>
-					<p id=\"summary\"> " . $empfehlung["text"] . "</p>
+					<p id=\"summary\"> " . $post["text"] . "</p>
 				</div>
 			</div>
 		</a>

@@ -19,7 +19,7 @@ $password = $_POST["password"];
 
 
 //holt das gespeicherte password hash
-$user = $database->getFirstResult($database->query("SELECT user_id, password FROM user WHERE email = ? LIMIT 1", array($email), array("s")));
+$user = DatabaseManager::$database->getFirstResult(DatabaseManager::$database->query("SELECT user_id, password FROM user WHERE email = ? LIMIT 1", array($email), array("s")));
 
 $login_error = "";
 
@@ -35,7 +35,7 @@ session_start();
 session_regenerate_id(true);
 
 //seesion wird in die database "gespeichert"
-$database->query("UPDATE user SET session = ? WHERE user_id = ? LIMIT 1", array(session_id(), $user["user_id"]), array("s", "s"));
+DatabaseManager::$database->query("UPDATE user SET session = ? WHERE user_id = ? LIMIT 1", array(session_id(), $user["user_id"]), array("s", "s"));
 
 //Stellt ein wann die session ablaufen soll
 $_SESSION["expiration_time"] = time() + 30 * 60;
