@@ -36,7 +36,7 @@ if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
 }
 
 //seht nach ob der nuter mit dieser e-mail addresse scon existiert
-$getUser = $database->query("SELECT user_id FROM user WHERE email = ?", array($email), array("s"));
+$getUser = DatabaseManager::$database->query("SELECT user_id FROM user WHERE email = ?", array($email), array("s"));
 if ($getUser === false || $getUser !== true && ($getUser->num_rows > 0)) {
     $signup_error = "Dieser benutzer existiert schon";
     return;
@@ -47,7 +47,7 @@ session_start();
 session_regenerate_id(true);
 
 //erstellt eine neuen nutzer
-$creteUser = $database->query("INSERT INTO user(email, password, session) VALUES(?, ?, ?)", array($email, password_hash($email . $password, PASSWORD_DEFAULT), session_id()), array("s", "s", "s"));
+$creteUser = DatabaseManager::$database->query("INSERT INTO user(email, password, session) VALUES(?, ?, ?)", array($email, password_hash($email . $password, PASSWORD_DEFAULT), session_id()), array("s", "s", "s"));
 
 print_r($creteUser);
 

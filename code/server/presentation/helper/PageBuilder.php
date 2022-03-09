@@ -24,11 +24,11 @@ class PageBuilder
                         <img class=\"logo\" src=\"code/client/img/logo.png\" alt=\"\">
                     </a>
 
-                    <div class=\"button\">
+                    
                     ";
                     include("code/server/presentation/controller/task.php"); 
                     echo "
-                    </div>
+                    
                 </div>
         
                 <div class=\"box-underliner\">

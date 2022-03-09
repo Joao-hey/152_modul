@@ -45,36 +45,59 @@ html{
     width: 480px;
     padding-left: 2em;
 }
-.box-header .button{
-    flex-wrap: nowrap;
-    flex-direction: row-reverse;
-    align-self: center;
+.box-header .button-with_Account {
+    /* flex-wrap: nowrap; */
+    /* flex-direction: row-reverse; */
+    /* align-self: center; */
     font-size: 1.5em;
-    width: max-content;
-    height: auto;
-    align-items: center;
+    /* width: max-content; */
+    /* height: auto; */
+    /* align-items: center; */
+    text-align: right;
 }
-.box-header .button a {
+.box-header .button-with_Account a {
     margin-right: 0.5em;
-    margin-top: 20vh;
+    /* margin-top: 20vh; */
     padding: 1.2em;
-    width: 10%;
+    /* width: 10%; */
     border: 2px solid var(--white);
     border-radius: 10% / 50%;
     text-decoration: none;
+    vertical-align: middle;
 }
-.logoff{
-    margin-top: 20vh;
-   align-items: center;
-}
-.user-icon{
-    flex-wrap: nowrap;
-    flex-direction: row;
+
+.box-header .button-no_account {
+    /* flex-wrap: nowrap; */
+    /* flex-direction: row-reverse; */
     align-self: center;
-    float: right;
-    margin-right: 3em;
     font-size: 1.5em;
-    height: 10vw;
+    /* width: max-content; */
+    /* height: auto; */
+    text-align: right;
+}
+
+.box-header .button-no_account a{
+    margin-right: 0.5em;
+    /* margin-top: 20vh; */
+    padding: 1.5em;
+    /* width: 10%; */
+    border: 2px solid var(--white);
+    border-radius: 10% / 50%;
+    text-decoration: none;
+    vertical-align: middle;
+
+}
+
+.user-icon{
+        /* flex-wrap: nowrap; */
+    /* flex-direction: row; */
+    /* align-self: center; */
+    /* float: right; */
+    margin-right: 1em;
+    font-size: 1.5em;
+    height: 11vw;
+    vertical-align: middle;
+    display: inline-block;
 }
 
 .box-underliner picture img{
@@ -90,6 +113,61 @@ html{
 
 
 
+p {
+    color: var(--black);
+    margin-bottom: 0px;
+}
+
+.box-body div {
+    justify-content: left;
+    color: var(--black);
+}
+
+h1{
+    margin: 0px;
+}
+
+form {
+    color: var(--black);
+    align-items: center;
+    padding-left: 1em;
+}
+
+.box-body-account {
+    display: flex;
+    justify-content: center;
+    color: var(--black);
+}
+
+.box-body-account * {
+    color: var(--black);
+}
+
+.box-body-account div {
+    width: 70%;
+    background-color: var(--white);
+    padding: 5%;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    display: flex; 
+    justify-content: left;
+    color: var(--black);
+}
+
+.box-body-account div div {
+    flex-direction: row;
+    padding-left: 0px;
+    width: 100%;
+}
+
+.error-box {
+    color: var(--red);
+    font-size: 1.5em;
+}
+.add-button{
+    background-color: var(--red);
+}
+
 @media (max-width: 1200px)
 {
     .box-header a{
@@ -100,6 +178,9 @@ html{
         width: 100%;
     }
     
+    .user-icon{
+        height: 12vw;
+    }
 }
 @media (max-width: 730px)
 {
@@ -112,20 +193,23 @@ html{
         width: 40%;
     }
 
-    .box-header .button{
-        flex-wrap: nowrap;
-        flex-direction: row-reverse;
-        align-self: center;
-        font-size: 1em;
-        height: auto;
+    .user-icon{
+        height: 13vw;
+        margin-right: 0px;
+    }
+   
+    .box-header .button-no_account a{
+        margin-right: 0px;
+        padding: 1vw;
+        font-size: 0.7em;
     }
 
-    .box-header .button a {
-        margin-right: 0.3em;
-        font-size: 1em;
-        padding: 1em 0.2em 1em 0.2em;
-        border: 1px solid var(--white);
-        border-radius: 10px;
+ 
+
+    .box-header .button-with_Account a {
+        margin-right: 0px;
+        padding: 1vw;
+        font-size: 0.7em;
     }
     
 }

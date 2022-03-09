@@ -28,8 +28,9 @@
 </style>
 
 <div class="box-body">
-                    <div>
-						<div></div>
+	    <div>
+			<a class="box" class="add-button" href="create.php"> Plus </a>
+			<div></div>
 
 <?php
 	require_once "code/server/database.php";
