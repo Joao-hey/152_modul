@@ -1,19 +1,19 @@
 <?php
 //mit der datenbank verbinden
-require_once "code/server/database.php";
+require_once "code/server/presentation/helper/Profilmanager.php";
 ?>
 
 
 <?php
 //ENGLISSSSSSSSSSSS PLSSSSSSSSSSSSSSSSSSSSSSSSS
 //schaut nach ob man angemeldet ist
-if (DatabaseManager::initialize() === false) : ?>
-    <script>
-        alert("Sie müssen Sie sich anmelden");
-        window.open("index.php", "_self");
-    </script>
+if (Profilmanager::initialize() === false) : ?>
+<script>
+alert("Sie müssen Sie sich anmelden");
+window.open("index.php", "_self");
+</script>
 
-    <?php die(); ?>
+<?php die(); ?>
 <?php endif; ?>
 
 <?php
@@ -37,17 +37,19 @@ if ($totalFiles) {
 
 //variabeln gesetzt
 $titel = $_POST["titel"];
-$text = $_POST["Beschreibung"];
+$text = $_POST["text"];
+$textImage = $_POST["textImage"];
+$textTable = $_POST["textTable"];
 $realName = $_FILES["image"]["name"];
 $imageName = $_FILES["image"]["name"] = $countFile + 1 . ".png";
-$licens = $_FILES["licens"];
+$licens = $_POST["licens"];
 
 //namen der dateien
 $tempPath = $_FILES["image"]["tmp_name"];
-$basename =  basename($imageName);
+$imgBasename =  basename($imageName);
 
 //Path zum abspeicher ort
-$originalPath = ($uploadTo . $basename);
+$originalPath = ($uploadTo . $imgBasename);
 $imageType = pathinfo($originalPath, PATHINFO_EXTENSION);
 
 
@@ -57,14 +59,14 @@ if (!empty($imageName)) {
         //dateien werden auf den server geladen 
         if (move_uploaded_file($tempPath, $originalPath)) {
 
-            $createEmp = $database->query("INSERT INTO posts(titel, text, img, lizens) VALUES(?, ?, ?, ?)", array($titel, $text, $basename, ), array("s", "s", "s", "i"));
+            $createEmp = $database->query("INSERT INTO posts(titel, text, textImage, textTable, imageName, lizens) VALUES(?, ?, ?, ?, ?, ?)", array($titel, $text,  $textTable, $textImgage, $imgBasename, $licens), array("s", "s", "s", "s", "s", "s"));
 
             //falls die erstellung nicht erfolgreich war ergibt es eine fehler meldung
             if (!$createEmp || ($createEmp !== true && $createEmp->affected_rows != 1)) {
                 echo $signup_error = "Die registierung hat fehlgeschlagen versuchen sie es enuet oder meden sie sich";
                 return;
             }
-            header("Location: Empfehlungen.php");
+            header("Location: index.php");
         } else {
             echo $signup_error = 'image Not uploaded ! try again';
             return;

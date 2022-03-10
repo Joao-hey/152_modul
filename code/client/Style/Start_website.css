@@ -111,16 +111,39 @@ html{
     width: 100%;
 }
 
-
-
 p {
     color: var(--black);
     margin-bottom: 0px;
 }
 
+
+.box-body{
+    display: flex;
+    justify-content: center;
+    color: var(--black);
+}
+
+.box-body *{
+    color: var(--black);
+}
+
 .box-body div {
     justify-content: left;
     color: var(--black);
+    display: flex;
+    width: 70%;
+    background-color: var(--white);
+    color: var(--black);
+    padding: 5%;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.box-body div div{
+    background-color: var(--white);
+    color: var(--black);
+    width: 20%;
+    margin-bottom: 1em;
 }
 
 h1{
@@ -167,6 +190,64 @@ form {
 .add-button{
     background-color: var(--red);
 }
+.box-body-create{
+    display: flex;
+    justify-content: center;
+}
+
+
+.box-body-create *{
+    color: var(--black);
+    display: inline-block;
+}
+
+.box-body-create .box-body-create-data{
+    width: 70%;
+    background-color: var(--white);
+    padding: 5%;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    display: flex; 
+    justify-content: left;
+    color: var(--black);
+}
+.box-body-create .box-body-create-data .box-body-create-left{
+    display: flex;
+    flex-direction: column;
+    width: 50vw;
+}
+.box-body-create .box-body-create-data .box-body-create-right{
+    display: flex;
+    flex-direction: column;
+    display: inline-block;
+    padding-top: 5vh;
+    margin-right: 2vw;
+}
+.box-body-create .box-body-create-right .input div{
+    width: 20vh;
+}
+
+.box-body-create .box-body-create-data .box-body-create-right .input div div img{
+    display: inline-block;
+    max-width: 19vw;
+}
+
+
+
+.box-body-create div .input{
+    flex-direction: row;
+}
+.box-body-create div .input *{
+    margin: 0px;
+}
+
+.text-box{
+    width: 90%;
+}
+
+.text-box-data{
+    max-width: 100%;
+}
 
 @media (max-width: 1200px)
 {
@@ -182,7 +263,7 @@ form {
         height: 12vw;
     }
 }
-@media (max-width: 730px)
+@media (max-width: 750px)
 {
     .box-header{
         width: 100%;

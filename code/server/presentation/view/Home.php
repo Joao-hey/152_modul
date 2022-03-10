@@ -1,31 +1,4 @@
-<style>
-	.box-body{
-    display: flex;
-    justify-content: center;
-    color: var(--black);
-}
 
-.box-body *{
-    color: var(--black);
-}
-
-.box-body div{
-    display: flex;
-    width: 70%;
-    background-color: var(--white);
-    color: var(--black);
-    padding: 5%;
-    flex-wrap: wrap;
-    justify-content: space-around;
-}
-
-.box-body div div{
-    background-color: var(--white);
-    color: var(--black);
-    width: 20%;
-    margin-bottom: 1em;
-}
-</style>
 
 <div class="box-body">
 	    <div>
