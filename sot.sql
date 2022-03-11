@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Erstellungszeit: 11. Mrz 2022 um 04:25
--- Server-Version: 10.4.20-MariaDB
--- PHP-Version: 8.0.9
+-- Erstellungszeit: 11. Mrz 2022 um 11:57
+-- Server-Version: 10.4.22-MariaDB
+-- PHP-Version: 8.1.2
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -42,7 +42,10 @@ CREATE TABLE `posts` (
 --
 
 INSERT INTO `posts` (`post_id`, `titel`, `text`, `rolle`, `textImage`, `imageName`, `lizens`) VALUES
-(0, 'Hell', 'asdasd', 'rat car', 'Shitpost', '2.png', 'cc-by-nd');
+(2, '', 'atunthihgfggggggggxsss', 'Shitpost', 'negaman', '8.png', 'cc0'),
+(3, '<h1 color=\"red\">haha lul</h1>', '', 'Shitpost', 'lol nega :)', '9.png', 'cc0'),
+(4, 'scheiss', 'hahaha', 'Recipy', 'agg', '10.png', 'cc0'),
+(5, 's', 'sadsad', 'Recipy', 'aasdsad', '11.png', 'cc-by-nc');
 
 -- --------------------------------------------------------
 
@@ -62,7 +65,7 @@ CREATE TABLE `user` (
 --
 
 INSERT INTO `user` (`user_id`, `email`, `password`, `session`) VALUES
-(1, 'jooaoribcorreia@gmail.com', '$2y$10$YcWh8ydqo9Xgz0Va4eBD8em9wqxwF4PkxIfL/Qcd5RqYdzxJG7nAK', 'qshv3qm7ea8b13s834470s96cc'),
+(1, 'jooaoribcorreia@gmail.com', '$2y$10$YcWh8ydqo9Xgz0Va4eBD8em9wqxwF4PkxIfL/Qcd5RqYdzxJG7nAK', '50r43ndv5hbq1gdko9ph7jqq2d'),
 (2, 'he@gmail.com', '$2y$10$CR3vX4xyttO2N5RIfsh76.SlqbmisNGL3y.eCeGxXpI3qsBmiae/G', ''),
 (3, 'hi@gmail.com', '$2y$10$WqjtpjW0x/qEJ2J89lnpM.JLHaaTuVTddp41c/y6VPLBRF4RfKSYy', '');
 
@@ -86,6 +89,12 @@ ALTER TABLE `user`
 --
 -- AUTO_INCREMENT für exportierte Tabellen
 --
+
+--
+-- AUTO_INCREMENT für Tabelle `posts`
+--
+ALTER TABLE `posts`
+  MODIFY `post_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT für Tabelle `user`
