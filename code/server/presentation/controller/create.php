@@ -17,11 +17,11 @@ window.open("index.php", "_self");
 <?php endif; ?>
 
 <?php
+
 //checkt ob der knopf gedrückt wurde
 if (!isset($_POST["submit"])) {
     return;
 }
-
 
 //einstellungen für die bilder und abspeicher ort
 $uploadTo = $_SERVER["DOCUMENT_ROOT"] . "code/client/img/img-post/";
@@ -37,9 +37,9 @@ if ($totalFiles) {
 
 //variabeln gesetzt
 $titel = $_POST["titel"];
-$text = $_POST["text"];
+$text = $_POST["text-box"];
 $textImage = $_POST["textImage"];
-$textTable = $_POST["textTable"];
+$Role = $_POST["Role"];
 $realName = $_FILES["image"]["name"];
 $imageName = $_FILES["image"]["name"] = $countFile + 1 . ".png";
 $licens = $_POST["licens"];
@@ -59,7 +59,7 @@ if (!empty($imageName)) {
         //dateien werden auf den server geladen 
         if (move_uploaded_file($tempPath, $originalPath)) {
 
-            $createEmp = $database->query("INSERT INTO posts(titel, text, textImage, textTable, imageName, lizens) VALUES(?, ?, ?, ?, ?, ?)", array($titel, $text,  $textTable, $textImgage, $imgBasename, $licens), array("s", "s", "s", "s", "s", "s"));
+            $createEmp = $database->query("INSERT INTO posts(titel, text, textImage, Role, imageName, lizens) VALUES(?, ?, ?, ?, ?, ?)", array($titel, $text,  $Role, $textImgage, $imgBasename, $licens), array("s", "s", "s", "s", "s", "s"));
 
             //falls die erstellung nicht erfolgreich war ergibt es eine fehler meldung
             if (!$createEmp || ($createEmp !== true && $createEmp->affected_rows != 1)) {

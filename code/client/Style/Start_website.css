@@ -152,7 +152,6 @@ h1{
 
 form {
     color: var(--black);
-    align-items: center;
     padding-left: 1em;
 }
 
@@ -212,42 +211,76 @@ form {
     color: var(--black);
 }
 .box-body-create .box-body-create-data .box-body-create-left{
-    display: flex;
-    flex-direction: column;
-    width: 50vw;
-}
-.box-body-create .box-body-create-data .box-body-create-right{
-    display: flex;
-    flex-direction: column;
-    display: inline-block;
-    padding-top: 5vh;
-    margin-right: 2vw;
-}
-.box-body-create .box-body-create-right .input div{
-    width: 20vh;
+    width: 100%;
 }
 
-.box-body-create .box-body-create-data .box-body-create-right .input div div img{
+.box-body-create .box-body-create-data .box-body-create-right{
+    padding-top: 5vh;
+    margin-left: 5vh;
+    width: 50%;
+}
+
+.box-body-create .box-body-create-data .box-body-create-left div{
+    display: block;
+    width: 100%;
+}
+
+.box-body-create .box-body-create-data .box-body-create-right div{
+    display: block;
+    width: 100%;
+}
+
+.box-body-create .box-body-create-right .input div{
     display: inline-block;
+    width: 100%;
+}
+
+
+.box-body-create .box-body-create-data .box-body-create-right .input div div img{
+    display: block;
     max-width: 19vw;
 }
 
-
-
-.box-body-create div .input{
-    flex-direction: row;
+.image-button{
+ /*   display: none;*/
 }
-.box-body-create div .input *{
+
+.file-upload-button{
+    display: block;
+}
+
+.box-body-create div .input * {
     margin: 0px;
+    margin-bottom: 1vh;
 }
 
 .text-box{
-    width: 90%;
+    width: 100%;
+    
 }
 
 .text-box-data{
-    max-width: 100%;
+    display: inline-block;
+    width: 90%;
 }
+
+.titel{
+    width: 70%;
+}
+
+.license{
+    display: block;
+    width: 100%;
+}
+
+.license div{
+    width: 100%;
+}
+
+.role *{
+    display: inline-block;
+}
+
 
 @media (max-width: 1200px)
 {
@@ -285,13 +318,18 @@ form {
         font-size: 0.7em;
     }
 
- 
-
     .box-header .button-with_Account a {
         margin-right: 0px;
         padding: 1vw;
         font-size: 0.7em;
     }
     
+    .box-body-create .box-body-create-data{
+        width: 100%;
+    }
+
+    .role *{
+        display: block;
+    }
 }
 

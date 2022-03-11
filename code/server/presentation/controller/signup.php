@@ -42,14 +42,16 @@ if ($getUser === false || $getUser !== true && ($getUser->num_rows > 0)) {
     return;
 }
 
-//session wird gestartet
-session_start();
+//session is started if no session exist
+if (!session_id()) {
+    session_start();
+}
 session_regenerate_id(true);
 
 //erstellt eine neuen nutzer
 $creteUser = DatabaseManager::$database->query("INSERT INTO user(email, password, session) VALUES(?, ?, ?)", array($email, password_hash($email . $password, PASSWORD_DEFAULT), session_id()), array("s", "s", "s"));
 
-print_r($creteUser);
+
 
 //falls die erstellung nicht erfolgreich war ergibt es eine fehler meldung
 //echo $database->getError();

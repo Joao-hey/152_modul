@@ -9,7 +9,9 @@ class Profilmanager
     //holt den user aus der sql bank
     public static function initialize()
     {    
-        session_start();
+        if (!session_id()) {
+            session_start();
+        } 
         if (!isset($_SESSION["expiration_time"])){
             return false;
         }
