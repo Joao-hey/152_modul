@@ -142,7 +142,6 @@ p {
 .box-body div div{
     background-color: var(--white);
     color: var(--black);
-    width: 20%;
     margin-bottom: 1em;
 }
 
@@ -162,11 +161,25 @@ p {
 }
 
 .box{
+    width: 80%;
+    display: inline;
+}
+
+.box-image-label{
+    font-size: 2.5em;
+}
+
+.post-site{
     width: 100%;
 }
 
-.box img{
-    width: 10vw;
+.post-img{
+    width: 20vw;
+}
+
+
+.box-image{
+ width: 3vw;
 }
 
 h1{
@@ -209,9 +222,7 @@ form {
     color: var(--red);
     font-size: 1.5em;
 }
-.add-button{
-    background-color: var(--red);
-}
+
 .box-body-create{
     display: flex;
     justify-content: center;
@@ -223,6 +234,10 @@ form {
 
 .post-content{
     width: 100%;
+}
+
+.post-content div{
+    display: block;
 }
 
 .post-content-img{
@@ -275,8 +290,21 @@ form {
     max-width: 19vw;
 }
 
-.image-button{
- /*   display: none;*/
+.dummy-button{
+    pointer-events: none;
+    position: absolute;
+}
+
+.image-button-container {
+    position: relative;
+}
+
+.image-button-container label {
+    display: block;
+}
+
+.image-button-container input {
+    opacity: 0;
 }
 
 .file-upload-button{

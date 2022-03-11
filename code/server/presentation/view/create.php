@@ -58,9 +58,9 @@ $("#image").change(function() {
             <div class="input">
                 <div>
                     
-                    <div>
+                    <div class="image-button-container">
                         <label for="image">Bild:</label>
-                        <button for="image">Bild Hinzufügen</button>
+                        <button for="image" type="button" class="dummy-button">Bild Hinzufügen</button>
                         <input class="image-button" type="file" name="image" id="image" accept="image/*"
                             onchange="preview_image(event)">
 
@@ -99,7 +99,7 @@ $("#image").change(function() {
                         </div>
 
                         <div>
-                            <input type="radio" id="cc-by-nc-nd" name="license" value="cc-by-nc-nd">
+                            <input type="radio" id="c" name="license" value="cc-by-nc-nd">
                             <label for="cc-by-nc-nd">cc-by-nc-nd</label>
                         </div>
                     
@@ -118,8 +118,9 @@ $("#image").change(function() {
                         <label for="Shitpost">Shitpost</label>
                     </div>
 
-                    <p>
-                        <button for="image">Posten</button>
+                    <p class="image-button-container">
+                       
+                        <button for="submit" type="button" class="dummy-button">Posten</button>
                         <input type="submit" name="submit">
                     </p>
                 </div>

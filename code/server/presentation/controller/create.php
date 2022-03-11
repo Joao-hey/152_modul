@@ -53,17 +53,19 @@ $originalPath = ($uploadTo . $imgBasename);
 $imageType = pathinfo($originalPath, PATHINFO_EXTENSION);
 
 
+
+
 if (!empty($imageName)) {
 
     if (in_array($imageType, $allowedImageType)) {
         //dateien werden auf den server geladen 
         if (move_uploaded_file($tempPath, $originalPath)) {
 
-            $createEmp = DatabaseManager::$database->query("INSERT INTO posts(titel, text, rolle, textImage, imageName, lizens) VALUES(?, ?, ?, ?, ?, ?)", array($titel, $text,  $role, $textImage, $imgBasename, $licens), array("s", "s", "s", "s", "s", "s"));
+            $createPost = DatabaseManager::$database->query("INSERT INTO posts(titel, text, rolle, textImage, imageName, lizens) VALUES(?, ?, ?, ?, ?, ?)", array($titel, $text,  $role, $textImage, $imgBasename, $licens), array("s", "s", "s", "s", "s", "s"));
 
             //falls die erstellung nicht erfolgreich war ergibt es eine fehler meldung
-            if (!$createEmp || ($createEmp !== true && $createEmp->affected_rows != 1)) {
-                var_dump($createEmp);
+            if (!$createPost || ($createPost !== true && $createPost->affected_rows != 1)) {
+                var_dump($createPost);
                 echo $signup_error = "Die registierung hat fehlgeschlagen versuchen sie es enuet oder meden sie sich";
                 return;
             }
