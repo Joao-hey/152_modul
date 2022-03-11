@@ -24,7 +24,7 @@ if (!isset($_POST["submit"])) {
 }
 
 //einstellungen für die bilder und abspeicher ort
-$uploadTo = $_SERVER["DOCUMENT_ROOT"] . "code/client/img/img-post/";
+$uploadTo = $_SERVER["DOCUMENT_ROOT"] . "/152_modul/code/client/img/img-post/";
 $allowedImageType = array('jpg', 'png', 'jpeg', 'gif', 'pdf', 'doc');
 $countFile = 0;
 $totalFiles = glob($uploadTo . "*");
@@ -39,10 +39,10 @@ if ($totalFiles) {
 $titel = $_POST["titel"];
 $text = $_POST["text-box"];
 $textImage = $_POST["textImage"];
-$Role = $_POST["Role"];
+$role = $_POST["role"];
 $realName = $_FILES["image"]["name"];
 $imageName = $_FILES["image"]["name"] = $countFile + 1 . ".png";
-$licens = $_POST["licens"];
+$licens = $_POST["license"];
 
 //namen der dateien
 $tempPath = $_FILES["image"]["tmp_name"];
@@ -59,10 +59,11 @@ if (!empty($imageName)) {
         //dateien werden auf den server geladen 
         if (move_uploaded_file($tempPath, $originalPath)) {
 
-            $createEmp = $database->query("INSERT INTO posts(titel, text, textImage, Role, imageName, lizens) VALUES(?, ?, ?, ?, ?, ?)", array($titel, $text,  $Role, $textImgage, $imgBasename, $licens), array("s", "s", "s", "s", "s", "s"));
+            $createEmp = DatabaseManager::$database->query("INSERT INTO posts(titel, text, rolle, textImage, imageName, lizens) VALUES(?, ?, ?, ?, ?, ?)", array($titel, $text,  $role, $textImage, $imgBasename, $licens), array("s", "s", "s", "s", "s", "s"));
 
             //falls die erstellung nicht erfolgreich war ergibt es eine fehler meldung
             if (!$createEmp || ($createEmp !== true && $createEmp->affected_rows != 1)) {
+                var_dump($createEmp);
                 echo $signup_error = "Die registierung hat fehlgeschlagen versuchen sie es enuet oder meden sie sich";
                 return;
             }

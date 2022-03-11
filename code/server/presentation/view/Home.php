@@ -2,8 +2,8 @@
 
 <div class="box-body">
 	    <div>
-			<a class="box" class="add-button" href="create.php"> Plus </a>
-			<div></div>
+			<a class="box" class="add-button" href="create.php"> <img src="code/client/img/plus_v2.png" alt="hah"> </a>
+			
 
 <?php
 	require_once "code/server/database.php";
@@ -12,9 +12,9 @@
 
 	foreach ($posts as $post) {
 		echo " 
-		<a href=\"Empfehlung.php? id=" . $post["empf_id"] . "\">
-			<div class=\"emp\">
-				<img src=\"" . "152_modul/code/client/view/images/new/". $post["img_path"] . "\" alt=\"place\">
+		<a class=\"post\" href=\"Post.php? id=" . $post["post_id"] . "\">
+			<div class=\"post-content\" class=\"emp\">
+				<img class=\"post-content-img\" src=\"" . "code/client/img/img-post/". $post["imageName"] . "\" alt=\"place\">
 				<h1>" . $post["titel"] . "</h1>
 				
 				<div>

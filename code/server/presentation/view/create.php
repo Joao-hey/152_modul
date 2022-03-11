@@ -49,7 +49,7 @@ $("#image").change(function() {
             <div class="input">
                 <div class="text-box">
                     <textarea class="text-box-data" name="text-box" id="text-box" placeholder="Text" cols="26" rows="30"
-                        maxlength="10"></textarea>
+                       ></textarea>
                 </div>
             </div>
         </div>
@@ -102,6 +102,8 @@ $("#image").change(function() {
                             <input type="radio" id="cc-by-nc-nd" name="license" value="cc-by-nc-nd">
                             <label for="cc-by-nc-nd">cc-by-nc-nd</label>
                         </div>
+                    
+                        <p>Sehe <a href="https://de.wikipedia.org/wiki/Creative_Commons"> creative Commons</a></p>
                     </div>
 
                     <label for="role">Rolle:</label>

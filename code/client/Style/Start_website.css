@@ -146,6 +146,29 @@ p {
     margin-bottom: 1em;
 }
 
+.box-body div .post{
+    background-color: var(--white);
+    color: var(--black);
+    width: 20%;
+    padding: 5%;
+    margin-bottom: 1em;
+}
+
+.box-body div .post .post-content{
+    background-color: var(--white);
+    color: var(--black);
+    width: 100%;
+    margin-bottom: 1em;
+}
+
+.box{
+    width: 100%;
+}
+
+.box img{
+    width: 10vw;
+}
+
 h1{
     margin: 0px;
 }
@@ -194,6 +217,17 @@ form {
     justify-content: center;
 }
 
+.post{
+    width: 20%;
+}
+
+.post-content{
+    width: 100%;
+}
+
+.post-content-img{
+    width: 100%;
+}
 
 .box-body-create *{
     color: var(--black);
